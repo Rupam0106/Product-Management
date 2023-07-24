@@ -7,6 +7,7 @@ import { CheckOutComponent } from './components/pages/check-out/check-out.compon
 import { OrderSuccessComponent } from './components/pages/order-success/order-success.component';
 import { AdminProductsComponent } from './components/admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
+import { LoginComponent } from './components/pages/login/login.component';
 
 const routes: Routes = [
   {
@@ -31,7 +32,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: HomeComponent,
+    component: LoginComponent,
   },
   {
     path: 'admin/products',
