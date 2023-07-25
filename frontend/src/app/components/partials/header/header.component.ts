@@ -12,13 +12,11 @@ export class HeaderComponent {
     private userService: UserService,
     private fireAuth: AngularFireAuth
   ) {
-      this.userName=this.userService.getName();
-      console.log(this.userService.getName)
+    this.userName = this.userService.getName();
+    console.log(this.userService.getName);
   }
 
-  ngOnInit() {
-  
-  }
+  ngOnInit() {}
   logout() {
     console.log('logout successfully');
   }

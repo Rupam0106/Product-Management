@@ -15,6 +15,12 @@ import { MyOrdersComponent } from './components/pages/my-orders/my-orders.compon
 import { AdminProductsComponent } from './components/admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './components/pages/login/login.component';
+import { ProductFormComponent } from './components/admin/product-form/product-form.component';
+import { UserService } from './services/user.service';
+import { CategoryService } from './services/category.service';
+import { CounterComponent } from './shared/counter/counter.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './state/reducers/counter.reducer';
 
 @NgModule({
   declarations: [
@@ -29,14 +35,17 @@ import { LoginComponent } from './components/pages/login/login.component';
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
+    ProductFormComponent,
+    CounterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     AngularFireModule.initializeApp(environment.firebase),
+    StoreModule.forRoot({ count: counterReducer }),
   ],
-  providers: [],
+  providers: [UserService, CategoryService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

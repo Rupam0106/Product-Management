@@ -8,6 +8,7 @@ import { OrderSuccessComponent } from './components/pages/order-success/order-su
 import { AdminProductsComponent } from './components/admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './components/pages/login/login.component';
+import { ProductFormComponent } from './components/admin/product-form/product-form.component';
 
 const routes: Routes = [
   {
@@ -39,10 +40,13 @@ const routes: Routes = [
     component: AdminProductsComponent,
   },
   {
+    path: 'admin/products/new',
+    component: ProductFormComponent,
+  },
+  {
     path: 'admin/orders',
     component: AdminOrdersComponent,
   },
-
 ];
 
 @NgModule({
