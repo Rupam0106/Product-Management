@@ -1,9 +1,11 @@
 import { environment } from './../environment/environment';
-import { NgModule } from '@angular/core';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/partials/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
@@ -20,7 +22,9 @@ import { UserService } from './services/user.service';
 import { CategoryService } from './services/category.service';
 import { CounterComponent } from './shared/counter/counter.component';
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './state/reducers/counter.reducer';
+import { CounterInputComponent } from './components/counter-input/counter-input.component';
+import { FormsModule } from '@angular/forms';
+import { appReducers } from './store/app.state';
 
 @NgModule({
   declarations: [
@@ -37,13 +41,17 @@ import { counterReducer } from './state/reducers/counter.reducer';
     LoginComponent,
     ProductFormComponent,
     CounterComponent,
+    CounterInputComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    StoreModule.forRoot({ count: counterReducer }),
+    StoreModule.forRoot(appReducers),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [UserService, CategoryService],
   bootstrap: [AppComponent],

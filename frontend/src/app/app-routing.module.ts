@@ -9,6 +9,7 @@ import { AdminProductsComponent } from './components/admin/admin-products/admin-
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { ProductFormComponent } from './components/admin/product-form/product-form.component';
+import { CounterComponent } from './shared/counter/counter.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent,
+  },
+  {
+    path: 'counter',
+    component: CounterComponent,
   },
   {
     path: 'shopping-cart',

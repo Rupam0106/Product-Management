@@ -13,6 +13,7 @@ export class CounterComponent {
 
   constructor(private store: Store<{ count: number }>) {
     this.count$ = store.select('count');
+    console.log(store)
   }
 
   increment() {
