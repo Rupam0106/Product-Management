@@ -12,7 +12,7 @@ import { AppState } from 'src/app/store/app.state';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent {
-  Products: Observable<Product[]> | undefined;
+  Products!: Observable<Product[]>;
 
   constructor(
     private store: Store<AppState>,

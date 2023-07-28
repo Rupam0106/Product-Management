@@ -1,33 +1,25 @@
 <div class="bg-white p-4">
-  <h1 class="flex justify-center font-bold text-2xl">List of Products</h1>
-  <div>
-    <div
-      class="grid grid-cols-3 gap-4 rounded-md"
-      *ngFor="let product of Products | async"
-    >
-      <div class="p-4">
-        <div>
+  <h1 class="d-flex justify-content-center">List of Products</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col" *ngFor="let product of Products | async">
+        <div class="card m-4" style="width: 18rem">
           <img
-            class="rounded-md"
-            src="{{"
-            product.productImage
-            }}
+            class="card-img-top"
+            src="{{ product.productImage }}"
             alt="productImage"
           />
-          <div class="pt-8">
-            <strong>Product Name :- </strong> {{ product.title }}
+          <div class="card-body">
+            <h5 class="card-title">
+              <strong>Product Name :- </strong> {{ product.title }}
+            </h5>
+            <p class="card-text">
+              <strong>Price :- </strong> {{ product.price }}
+            </p>
+            <a routerLink="/products" class="btn btn-primary"> Add To Cart</a>
           </div>
-          <div>
-            <strong>Description :- </strong>
-            {{ product.description }}
-          </div>
-          <div class="pb-8"><strong>Price :- </strong> {{ product.price }}</div>
         </div>
-        <button
-          class="bg-[#038a5f] hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full"
-        >
-          Add To Cart
-        </button>
       </div>
     </div>
   </div>

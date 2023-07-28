@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ProductFormComponent {
   categories: any;
-  constructor(private categoryService: CategoryService) {
-    this.categories = this.categoryService.getCategories();
-    console.log(this.categories)
+  constructor(private categoryService: CategoryService) {}
+
+  addProduct(data: any) {
+    console.log(data);
   }
 }

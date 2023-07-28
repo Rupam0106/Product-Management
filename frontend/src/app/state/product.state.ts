@@ -7,14 +7,63 @@ export interface ProductState {
 export const initialState: ProductState = {
   products: [
     {
-      _id: '64996195faea92165322d3fc',
+      id: '1',
       title: 'Canon Awesome Camera 850D',
       description:
         'New Added Best camera for Wedding photography and fashion shoot',
       price: 80000,
       productImage:
-        'https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/RupamStore/canon_eos_850d_01.jpg',
-      deletedAt: null,
+        'https://picsum.photos/seed/picsum/200',
+      stock: 250,
+    },
+    {
+      id: '1',
+      title: 'Canon Awesome Camera 850D',
+      description:
+        'New Added Best camera for Wedding photography and fashion shoot',
+      price: 80000,
+      productImage:
+        'https://picsum.photos/seed/picsum/200',
+      stock: 250,
+    },
+    {
+      id: '1',
+      title: 'Canon Awesome Camera 850D',
+      description:
+        'New Added Best camera for Wedding photography and fashion shoot',
+      price: 80000,
+      productImage:
+        'https://picsum.photos/seed/picsum/200',
+      stock: 250,
+    },
+    {
+      id: '1',
+      title: 'Canon Awesome Camera 850D',
+      description:
+        'New Added Best camera for Wedding photography and fashion shoot',
+      price: 80000,
+      productImage:
+        'https://picsum.photos/seed/picsum/200',
+      stock: 250,
+    },
+    {
+      id: '1',
+      title: 'Canon Awesome Camera 850D',
+      description:
+        'New Added Best camera for Wedding photography and fashion shoot',
+      price: 80000,
+      productImage:
+        'https://picsum.photos/seed/picsum/200',
+      stock: 250,
+    },
+    {
+      id: '1',
+      title: 'Canon Awesome Camera 850D',
+      description:
+        'New Added Best camera for Wedding photography and fashion shoot',
+      price: 80000,
+      productImage:
+        'https://picsum.photos/seed/picsum/200',
       stock: 250,
     },
   ],
